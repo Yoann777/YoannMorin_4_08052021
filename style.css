@@ -271,7 +271,15 @@ a:hover {
 .voffset-lg {
     margin-top: 80px;
 }
-
+.voffset-lg .quote {
+    font-size: 20px;
+    font-style: italic;
+    color: #000;
+}
+.voffset-lg .quote-name {
+    font-size: 14px;
+    line-height: 0;
+}
 .row-no-gutters {
     margin-right: 0;
     margin-left: 0;
