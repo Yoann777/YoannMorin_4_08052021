@@ -92,11 +92,16 @@ a:hover {
 
 
 .d-bloc a .icon-md {
-    color: rgba(255, 255, 255, .5);
+    color: rgba(0, 0, 0, 1);
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .d-bloc a:hover .icon-md {
-    color: rgba(0, 0, 0, 1);
+    color: #ff7f00;
+    background-color: black;
 }
 
 .l-bloc {
@@ -195,7 +200,18 @@ a:hover {
     float: right;
     z-index: 1;
 }
-
+.plan h2 {
+    font-size: 28px;
+}
+.plan ul {
+    font-size: 24px;
+    text-decoration: underline;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+.plan a {
+    color: #575757!important;
+}
 .nav > li {
     float: left;
     margin-top: 4px;
@@ -326,17 +342,18 @@ a[data-lightbox]:hover::before {
     font-size: 32px;
     width: 50px;
     height: 50px;
-    margin-left: -25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
     font-weight: 100;
     z-index: 1;
     position: absolute;
+    left: 45%;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
+
 
 a[data-lightbox]:hover img {
     opacity: 0.6;
@@ -431,11 +448,16 @@ h5,
 h6,
 p,
 label,
-.btn,
-a {
+.btn {
     font-family: "helvetica";
     font-weight: 400;
     color: #575757!important;
+    letter-spacing: 1px;
+}
+a {
+    font-family: "helvetica";
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 .container {
@@ -562,10 +584,6 @@ footer .black {
     font-size: 14px;
 }
 
-.bgc-dark-slate-blue {
-    background-color: #364577;
-}
-
 .bgc-atomic-tangerine {
     background-color: #ff7f00;
 }
@@ -593,8 +611,8 @@ footer .black {
 }
 
 .btn-atomic-tangerine:hover {
-    background: #a22f2f!important;
-    color: #fff!important;
+    background: #000!important;
+    color: #ff7f00!important;
 }
 
 .ltc-white {
