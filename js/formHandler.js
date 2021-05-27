@@ -32,33 +32,34 @@ $(function()
 					
 					formData[fieldID] = fieldData;		
 				});
-	
-				$.ajax({
-		        	url: processorFile,
-		    		type: "POST",
-		    		data: formData,
-		    		cache: false,
-		    		success: function() // Success
-		 			{  
-						if($form.is('[success-msg]')) // Show Success Message
-						{
-							$form.append("<div id='form-alert'><div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('success-msg')+"</strong></div></div>");
-						}
-						else // Re-Direct
-						{
-							window.location.replace($form.attr('success-url'));
-						}	
+				
+				// $.ajax({
+		  //       	url: processorFile,
+		  //   		type: "POST",
+		  //   		data: formData,
+		  //   		cache: false,
+		  //   		success: function() // Success
+		 	// 		{  
+				// 		if($form.is('[success-msg]')) // Show Success Message
+				// 		{
+				// 			$form.append("<div id='form-alert'><div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('success-msg')+"</strong></div></div>");
+				// 		}
+				// 		else // Re-Direct
+				// 		{
+				// 			window.location.replace($form.attr('success-url'));
+				// 		}	
 						
-						$form.trigger("reset"); // Clear Form	
-		 	   		},
-			   		error: function() // Fail
-			   		{
-						if($('#form-alert').length == 0)
-						{
-							$form.append("<div id='form-alert'><div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('fail-msg')+"</strong></div></div>");
-						}	
-			   		},
-		   		});
+				// 		$form.trigger("reset"); // Clear Form	
+		 	//    		},
+			 //   		error: function() // Fail
+			 //   		{
+				// 		if($('#form-alert').length == 0)
+				// 		{
+				// 			$form.append("<div id='form-alert'><div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('fail-msg')+"</strong></div></div>");
+				// 		}	
+			 //   		},
+		  //  		});
+		  		alert("Ce lien ne fonctionne pas, car ceci n'est pas un serveur php.");
 			}
          },
          filter: function() // Handle hidden form elements
@@ -70,7 +71,7 @@ $(function()
 	 // Get Path to processor PHP file
 	 function getProcessorPath(form)
 	 {
-		var path = "./includes/"+form.attr('id')+".php";
+		var path = "../includes/"+form.attr('id')+".php";
 		
 		if(form.attr('template-path')) // Check For Template path
 		{
